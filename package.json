@@ -1,0 +1,37 @@
+{
+  "name": "project_web_iii",
+  "version": "1.0.0",
+  "description": "Projeto do módulo Programação Web III do curso DevEL{AS}",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolinanog/web_III_Projeto_Carol.git"
+  },
+  "keywords": [
+    "programação",
+    "web",
+    "RESTful",
+    "APIs"
+  ],
+  "author": "Carolina de Araujo Nogueira Tinen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolinanog/web_III_Projeto_Carol/issues"
+  },
+  "homepage": "https://github.com/carolinanog/web_III_Projeto_Carol#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "sequelize": "^6.23.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
