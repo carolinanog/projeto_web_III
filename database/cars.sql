@@ -1,15 +1,62 @@
-DROP TABLE IF EXISTS cars;
+DROP TABLE IF EXISTS public.cars;
 
-CREATE TABLE cars(
-marca VARCHAR(15) PRIMARY KEY,
-modelo  VARCHAR(50) NOT NULL,
-ano INTEGER(4) NOT NULL,
-valor FLOAT(50) NOT NULL,
-cor VARCHAR(20) NOT NULL,
-cambio VARCHAR(20) NOT NULL,
-imagem VARCHAR(65) NOT NULL
+CREATE TABLE public.cars (
+	id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+	marca varchar(50) NOT NULL,
+	modelo varchar(50) NOT NULL,
+	ano integer NOT NULL,
+	preco float NOT NULL,
+	categoria varchar(30) NOT null,
+	cor varchar(30) NOT NULL,
+	cambio varchar(30) NOT NULL,
+	imagem varchar(100)
 );
 
-SELECT * FROM cars
+SELECT * FROM public.cars;
 
-INSERT INTO cars(marca, modelo, ano, valor, cor, cambio, imagem) VALUES ("Ford", "Focus", "2020", "26.799", "azul", "manual","fordfocus2020.jpeg")
+INSERT INTO public.cars(marca, modelo, ano, preco, categoria, cor, cambio, imagem) 
+VALUES ('Chevrolet', 'Cruze LT', 2020, 97000.00, 'sedan', 'cinza', 'manual', 'chevrolet_cruze_2020.jpg'),
+('Chevrolet', 'Cruze LT', 2022, 118000.00, 'sedan', 'preta',	'manual', 'chevrolet_cruze_lt_2022.jpg'), 
+('Chevrolet','Montana LS', 2019, 58000.00, 'pick up', 'branca', 'manual','chevrolet_montana_ls_2019.jpg'), 
+('Chevrolet', 'Onix LT', 2021, 66000.00,'hatch', 'branca', 'manual', 'chevrolet_onix_lt_2021.jpg'), 
+('Chevrolet', 'S10 LS', 2022, 223000.00, 'pick up', 'prata', 'automático', 'chevrolet_s10_ls_cd_2022.jpg'), 
+('Chevrolet', 'Spin', 2018, 63000.00, 'minivan', 'cinza', 'manual', 'chevrolet_spin_2018.jpg'), 
+('Chevrolet', 'Spin', 2019, 72000.00, 'minivan', 'prata', 'automático', 'chevrolet_spin_2019.jpg'), 
+('Chevrolet', 'Tracker Premier', 2021, 135000.00, 'SUV', 'prata', 'automático', 'chevrolet_tracker_premier_2021.jpg'), 
+('Fiat', 'Argo', 2021, 65500.00, 'hatch', 'branca', 'manual', 'fiat_argo_drive_2021.jpg'), 
+('Fiat','Doblo', 2019, 74200.00, 'minivan', 'prata', 'manual', 'fiat_doblo_2019.jpg'),
+('Fiat', 'Doblo', 2020, 78000.00, 'minivan', 'prata', 'manual', 'fiat_doblo_2020.jpg'), 
+('Fiat', 'Strada H Working', 2019, 63500.00, 'pick up', 'prata', 'manual', 'fiat_strada_hard_working_2019.jpg'), 
+('Fiat', 'Toro', 2021, 129000.00, 'pick up', 'branca', 'automático','fiat_toro_endurance_2021.jpg'), 
+('Fiat', 'Uno', 2019, 44300.00, 'hatch','branca', 'manual', 'fiat_uno_2019.jpg'), 
+('Fiat', 'Uno', 2020, 47000.00, 'hatch', 'branca', 'manual', 'fiat_uno_2020.jpg'),
+('Ford', 'Ecosport', 2020, 74500.00, 'SUV', 'prata', 'automático', 'ford_ecosport_2020.jpg'), 
+('Ford', 'Ka', 2018, 41000.00, 'hatch', 'branca', 'manual', 'ford_ka_2018.jpg'), 
+('Ford', 'Ka', 2019, 44000.00, 'hatch', 'prata', 'manual', 'ford_ka_2019.jpg'),
+('Ford', 'Ranger XLS', 2021, 187300.00, 'pick up', 'branca', 'automático', 'ford_ranger_xls_cd_2021.jpg'), 
+('Honda', 'Civic', 2021, 122000.00, 'sedan', 'prata', 'automático', 'honda_civic_2019.jpg'), 
+('Hyundai', 'Creta', 2019, 102000.00, 'SUV', 'branca', 'automático', 'hyundai_creta_2019.jpg'), 
+('Hyundai', 'HB20 S', 2019, 52000.00, 'hatch', 'preta', 'manual','hyundai_hb20_s_unique_2019.jpg'), 
+('Hyundai', 'HB20 vision', 2020, 60000.00, 'hatch', 'branca', 'automático', 'hyundai_hb20_vision_2020.jpg'), 
+('Nissan','Frontier XE', 2020, 173000.00, 'pick up', 'cinza', 'automático','nissan_frontier_xe_cd_2020.jpg'), 
+('Peugeot', '208', 2022, 86000.00, 'hatch','branca', 'manual', 'peugeot_208_2022.jpg'), 
+('Peugeot', '208 Active', 2021, 97500.00, 'hatch', 'branca', 'automático', 'peugeot_208_active_2021.jpg'), 
+('Peugeot', '5008 Griffe', 2019, 165200.00, 'minivan', 'verde', 'automático','peugeot_5008_griffe_thp_2019.jpg'), 
+('Renault', 'Captur', 2020, 103000.00, 'SUV', 'prata', 'automático', 'renault_captur_2020.jpg'), 
+('Renault', 'Captur', 2021, 110000.00, 'SUV', 'branca', 'automático', 'renault_captur_2021.jpg'), 
+('Renault', 'Duster', 2020, 77200.00, 'SUV', 'prata', 'automático', 'renault_duster_2020.jpg'), 
+('Renault', 'Kwid', 2020, 48000.00, 'hatch', 'branca', 'manual', 'renault_kwid_2020.jpg'), 
+('Renault', 'Kwid', 2021, 50000.00, 'hatch', 'branca', 'manual', 'renault_kwid2021.jpg'), 
+('Toyota', 'Corolla', 2019, 97000.00, 'sedan', 'prata', 'automático', 'toyota_corolla_2019.jpg'), 
+('Toyota', 'Corolla', 2022, 115000.00, 'sedan', 'cinza', 'automático', 'toyota_corolla_2022.jpg'), 
+('Toyota', 'Corolla Cross', 2022, 138600.00, 'SUV', 'prata', 'automático', 'toyota_corolla-cross_2022.jpg'), 
+('Toyota', 'Etios', 2020, 56900.00, 'sedan', 'branca', 'manual', 'toyota_etios_2020.jpg'),
+('Volkswagen', 'Voyage', 2019, 63200.00, 'sedan', 'preta', 'manual', 'volks_Voyage_2019.jpg'), 
+('Volkswagen', 'Voyage', 2020, 68000.00, 'sedan', 'branca', 'manual', 'volks_Voyage_2020.jpg'), 
+('Volkswagen', 'Gol Mpi', 2021, 75000.00, 'hatch', 'cinza', 'manual', 'volkswagen_gol_mpi_2021.jpg'),
+('Volkswagen', 'Golf', 2020, 165000.00, 'hatch', 'azul', 'automático', 'volkswagen_golf_2020.jpg'), 
+('Volkswagen', 'Jetta Rline', 2020, 130000.00, 'sedan', 'branca', 'automático', 'volkswagen_jetta_r-line_2020.jpg'), 
+('Volkswagen', 'Nivus Highline', 2021, 122400.00, 'SUV', 'cinza', 'automático', 'volkswagen_nivus_highline_2021.jpg'), 
+('Volkswagen', 'Passat Highline', 2018, 161000.00,	'sedan', 'preta', 'automático',  'volkswagen_passat_highline_2018.jpg'), 
+('Volkswagen', 'Saveiro Robust', 2021, 65300.00, 'pick up', 'branca', 'manual', 'volkswagen_saveiro_robust_2021.jpg'), 
+('Volkswagen', 'Tcross Highline', 2020, 142000.00, 'SUV', 'prata', 'automático', 'volkswagen_t-cross_highline_2020.jpg');
