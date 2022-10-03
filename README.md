@@ -1,5 +1,5 @@
 web-III-Projeto-Carol
-Projeto Web 3 DevEL{AS} Carolina - Sistema interno de uma revendedora online de carros usados, para visualizar carro por ID e por nome, inserir novo carro ao inventário, deletar carro, atualizar parcial e totalmente os dados de um carro.
+Projeto Web 3 DevEL{AS} Carolina - Sistema interno de uma revendedora online de carros usados, para visualizar um carro por ID e por nome, inserir novo carro ao inventário, deletar carro, atualizar parcial e totalmente os dados de um carro.
 
 Neste projeto, os sistemas externo e interno de uma revendedora online de carros foram implementados.
 
