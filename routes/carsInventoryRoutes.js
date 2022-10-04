@@ -9,14 +9,12 @@ export const router = express.Router();
 //display all cars
 router.get('/McQueenInternalSystem/allCars', CarsControllers.getAllCars); 
 // //display one car by id
-router.get('/McQueenInternalSystem/cars/:id', CarsControllers.getCarByID); 
+router.get('/McQueenInternalSystem/carByID/:id', CarsControllers.getCarByID); 
 //display cars by name
-router.get('/McQueenInternalSystem/cars/:modelo', CarsControllers.getCarByName); 
+router.get('/McQueenInternalSystem/carByName/:modelo', CarsControllers.getCarByName); 
 //add new car to the DB
 router.post('/McQueenInternalSystem/addNewCar', CarsControllers.addCarToInventory);
-// // //update completely a car info
-// router.put('/McQueenInternalSystem/updatecartotal/:id', CarsControllers.updateAllCarInfo);
-// // //update partially a car info
-// router.patch('/McQueenInternalSystem/updatecarpartial/:id', CarsControllers.updateCarInfoPartially);
-// // //delete a car from DB
+//update car info completely
+router.put('/McQueenInternalSystem/updatecarinfo/:id', CarsControllers.updateCarInfo);
+//delete a car from the DB
 router.delete('/McQueenInternalSystem/deleteCar/:id', CarsControllers.deleteCarFromInventory);
