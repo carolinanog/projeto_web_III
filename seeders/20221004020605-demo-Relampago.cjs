@@ -1,7 +1,7 @@
-import Car from '../models/carsModel.js';
 
-Car.bulkCreate([
-{
+module.exports = {
+   up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert('cars', [{
     marca: "Chevrolet",
  	modelo: "Cruze LT",
  	ano: 2020,
@@ -9,7 +9,9 @@ Car.bulkCreate([
  	categoria: "sedan",
  	cor: "cinza",
  	cambio: "manual",
- 	imagem: "chevrolet_cruze_2020.jpg"
+ 	imagem: "chevrolet_cruze_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 },
 {
     marca: "Chevrolet",
@@ -19,7 +21,9 @@ Car.bulkCreate([
  	categoria: "sedan",
  	cor: "preta",
  	cambio: "manual",
- 	imagem: "chevrolet_cruze_lt_2022.jpg"
+ 	imagem: "chevrolet_cruze_lt_2022.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 },
 {
     marca: "Chevrolet",
@@ -29,7 +33,9 @@ Car.bulkCreate([
  	categoria: "pick up",
  	cor: "branca",
  	cambio: "manual",
- 	imagem: "chevrolet_montana_ls_2019.jpg"
+ 	imagem: "chevrolet_montana_ls_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 },
 {
     marca: "Chevrolet",
@@ -39,7 +45,9 @@ Car.bulkCreate([
  	categoria: "pick up",
  	cor: "branca",
  	cambio: "manual",
- 	imagem: "chevrolet_montana_ls_2019.jpg"
+ 	imagem: "chevrolet_montana_ls_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 },
 {
     marca: "Chevrolet",
@@ -49,7 +57,9 @@ Car.bulkCreate([
  	categoria: "hatch",
  	cor: "branca",
  	cambio: "manual",
- 	imagem: "chevrolet_onix_lt_2021.jpg"
+ 	imagem: "chevrolet_onix_lt_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 },
 {
     marca: "Chevrolet",
@@ -59,7 +69,9 @@ Car.bulkCreate([
  	categoria: "pick up",
  	cor: "branca",
  	cambio: "manual",
- 	imagem: "chevrolet_montana_ls_2019.jpg"
+ 	imagem: "chevrolet_montana_ls_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 },
 {
     marca: "Chevrolet",
@@ -69,7 +81,9 @@ Car.bulkCreate([
  	categoria: "pick up",
  	cor: "prata",
  	cambio: "automático",
- 	imagem: "chevrolet_s10_ls_cd_2022.jpg"
+ 	imagem: "chevrolet_s10_ls_cd_2022.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 },
 {
     marca: "Chevrolet", 
@@ -79,7 +93,9 @@ Car.bulkCreate([
     categoria: "minivan", 
     cor: "cinza", 
     cambio: "manual", 
-    imagem: "chevrolet_spin_2018.jpg"
+    imagem: "chevrolet_spin_2018.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
 }, 
 {
     marca: "Chevrolet", 
@@ -89,7 +105,9 @@ Car.bulkCreate([
     categoria: "minivan", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "chevrolet_spin_2019.jpg"
+    imagem: "chevrolet_spin_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Chevrolet", 
@@ -99,7 +117,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "chevrolet_tracker_premier_2021.jpg"
+    imagem: "chevrolet_tracker_premier_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Fiat", 
@@ -109,7 +129,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "fiat_argo_drive_2021.jpg"
+    imagem: "fiat_argo_drive_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Fiat",
@@ -119,7 +141,9 @@ Car.bulkCreate([
     categoria: "minivan", 
     cor: "prata", 
     cambio: "manual", 
-    imagem: "fiat_doblo_2019.jpg"
+    imagem: "fiat_doblo_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     },
     {
     marca: "Fiat", 
@@ -129,7 +153,9 @@ Car.bulkCreate([
     categoria: "minivan", 
     cor: "prata", 
     cambio: "manual", 
-    imagem: "fiat_doblo_2020.jpg"
+    imagem: "fiat_doblo_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Fiat", 
@@ -139,7 +165,9 @@ Car.bulkCreate([
     categoria: "pick up", 
     cor: "prata", 
     cambio: "manual",
-    imagem: "fiat_strada_hard_working_2019.jpg"
+    imagem: "fiat_strada_hard_working_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Fiat", 
@@ -149,7 +177,9 @@ Car.bulkCreate([
     categoria: "pick up", 
     cor: "branca", 
     cambio: "automático",
-    imagem: "fiat_toro_endurance_2021.jpg"
+    imagem: "fiat_toro_endurance_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Fiat", 
@@ -159,7 +189,9 @@ Car.bulkCreate([
     categoria: "hatch",
     cor: "branca", 
     cambio: "manual", 
-    imagem: "fiat_uno_2019.jpg"
+    imagem: "fiat_uno_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Fiat", 
@@ -169,7 +201,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "fiat_uno_2020.jpg"
+    imagem: "fiat_uno_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     },
     {
     marca: "Ford", 
@@ -179,7 +213,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "ford_ecosport_2020.jpg"
+    imagem: "ford_ecosport_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Ford", 
@@ -189,7 +225,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "ford_ka_2018.jpg"
+    imagem: "ford_ka_2018.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Ford", 
@@ -199,7 +237,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "prata", 
     cambio: "manual", 
-    imagem: "ford_ka_2019.jpg"
+    imagem: "ford_ka_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     },
     {
     marca: "Ford", 
@@ -209,7 +249,9 @@ Car.bulkCreate([
     categoria: "pick up", 
     cor: "branca", 
     cambio: "automático", 
-    imagem: "ford_ranger_xls_cd_2021.jpg"
+    imagem: "ford_ranger_xls_cd_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Honda", 
@@ -219,7 +261,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "honda_civic_2019.jpg"
+    imagem: "honda_civic_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Hyundai", 
@@ -229,7 +273,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "branca", 
     cambio: "automático", 
-    imagem: "hyundai_creta_2019.jpg"
+    imagem: "hyundai_creta_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Hyundai", 
@@ -239,7 +285,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "preta", 
     cambio: "manual",
-    imagem: "hyundai_hb20_s_unique_2019.jpg"
+    imagem: "hyundai_hb20_s_unique_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Hyundai", 
@@ -249,7 +297,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "branca", 
     cambio: "automático", 
-    imagem: "hyundai_hb20_vision_2020.jpg"
+    imagem: "hyundai_hb20_vision_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Nissan",
@@ -259,7 +309,9 @@ Car.bulkCreate([
     categoria: "pick up", 
     cor: "cinza", 
     cambio: "automático",
-    imagem: "nissan_frontier_xe_cd_2020.jpg"
+    imagem: "nissan_frontier_xe_cd_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Peugeot", 
@@ -269,7 +321,9 @@ Car.bulkCreate([
     categoria: "hatch",
     cor: "branca", 
     cambio: "manual", 
-    imagem: "peugeot_208_2022.jpg"
+    imagem: "peugeot_208_2022.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Peugeot", 
@@ -279,7 +333,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "branca", 
     cambio: "automático", 
-    imagem: "peugeot_208_active_2021.jpg"
+    imagem: "peugeot_208_active_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Peugeot", 
@@ -289,7 +345,9 @@ Car.bulkCreate([
     categoria: "minivan", 
     cor: "verde", 
     cambio: "automático",
-    imagem: "peugeot_5008_griffe_thp_2019.jpg"
+    imagem: "peugeot_5008_griffe_thp_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Renault", 
@@ -299,7 +357,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "renault_captur_2020.jpg"
+    imagem: "renault_captur_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Renault", 
@@ -309,7 +369,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "branca", 
     cambio: "automático", 
-    imagem: "renault_captur_2021.jpg"
+    imagem: "renault_captur_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Renault", 
@@ -319,7 +381,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "renault_duster_2020.jpg"
+    imagem: "renault_duster_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Renault", 
@@ -329,7 +393,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "renault_kwid_2020.jpg"
+    imagem: "renault_kwid_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Renault", 
@@ -339,7 +405,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "renault_kwid2021.jpg"
+    imagem: "renault_kwid2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Toyota", 
@@ -349,7 +417,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "toyota_corolla_2019.jpg"
+    imagem: "toyota_corolla_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Toyota", 
@@ -359,7 +429,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "cinza", 
     cambio: "automático", 
-    imagem: "toyota_corolla_2022.jpg"
+    imagem: "toyota_corolla_2022.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Toyota", 
@@ -369,7 +441,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "toyota_corolla-cross_2022.jpg"
+    imagem: "toyota_corolla-cross_2022.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Toyota", 
@@ -379,7 +453,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "toyota_etios_2020.jpg"
+    imagem: "toyota_etios_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     },
     {
     marca: "Volkswagen", 
@@ -389,7 +465,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "preta", 
     cambio: "manual", 
-    imagem: "volks_Voyage_2019.jpg"
+    imagem: "volks_Voyage_2019.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Volkswagen", 
@@ -399,7 +477,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "volks_Voyage_2020.jpg"
+    imagem: "volks_Voyage_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Volkswagen", 
@@ -409,7 +489,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "cinza", 
     cambio: "manual",
-    imagem: "volkswagen_gol_mpi_2021.jpg"
+    imagem: "volkswagen_gol_mpi_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     },
     {
     marca: "Volkswagen", 
@@ -419,7 +501,9 @@ Car.bulkCreate([
     categoria: "hatch", 
     cor: "azul", 
     cambio: "automático", 
-    imagem: "volkswagen_golf_2020.jpg"
+    imagem: "volkswagen_golf_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Volkswagen", 
@@ -429,7 +513,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "branca", 
     cambio: "automático", 
-    imagem: "volkswagen_jetta_r-line_2020.jpg"
+    imagem: "volkswagen_jetta_r-line_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Volkswagen", 
@@ -439,7 +525,9 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "cinza", 
     cambio: "automático", 
-    imagem: "volkswagen_nivus_highline_2021.jpg"
+    imagem: "volkswagen_nivus_highline_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Volkswagen", 
@@ -449,7 +537,9 @@ Car.bulkCreate([
     categoria: "sedan", 
     cor: "preta", 
     cambio: "automático",  
-    imagem: "volkswagen_passat_highline_2018.jpg"
+    imagem: "volkswagen_passat_highline_2018.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Volkswagen", 
@@ -459,7 +549,9 @@ Car.bulkCreate([
     categoria: "pick up", 
     cor: "branca", 
     cambio: "manual", 
-    imagem: "volkswagen_saveiro_robust_2021.jpg"
+    imagem: "volkswagen_saveiro_robust_2021.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
     }, 
     {
     marca: "Volkswagen", 
@@ -469,6 +561,12 @@ Car.bulkCreate([
     categoria: "SUV", 
     cor: "prata", 
     cambio: "automático", 
-    imagem: "volkswagen_t-cross_highline_2020.jpg"
-    }
-]).then(() => console.log("Cars data have been saved to the Database!"));
+    imagem: "volkswagen_t-cross_highline_2020.jpg",
+    created_at: new Date(),
+    updated_at: new Date()
+    }])
+    },
+    down: (queryInterface, Sequelize) => {
+    return queryInterface.bulkDelete('cars', null, {})
+  },
+};
