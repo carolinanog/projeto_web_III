@@ -12,7 +12,10 @@ Um erro é gerado caso o usuário escolha o mesmo ponto de partida e destino.
 Também há uma segunda página, no menu superior, chamada "Todos os Aeroportos", onde é possível visualizar os detalhes de todos os aeroportos.
 
 Como rodar o projeto:
+- Clone o projeto do Git através do SSH git@github.com:carolinanog/projeto_web_III.git ou do HTTPS https://github.com/carolinanog/projeto_web_III.git, ou, ainda baixe o projeto zipado, como preferir.
 
-- Se necessário, rode o comando "npm i" no terminal para instalar os pacotes/as dependências necessárias.
+- Rode o comando "npm i" na rai do terminal para instalar os pacotes/as dependências necessárias.
 
 - No terminal, na raiz do projeto, insira o comando "npm run dev". Você deverá ver a mensagem "O servidor está funcionando na porta 80.".
+
+- No ThunderClient, clique na opção ""thunder-collection_projeto_web_III"

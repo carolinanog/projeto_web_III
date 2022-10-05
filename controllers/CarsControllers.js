@@ -3,7 +3,8 @@ import Car from '../models/carsModel.js';
 import { Op } from 'sequelize';
 export default class CarsControllers {
       static addCarToInventory(req, res) {
-      const { marca, modelo, ano, preco, categoria, cor, cambio, imagem } = req.body;
+      const { marca, modelo, ano, preco, categoria, cor, cambio } = req.body;
+      const imagem = req.file.filename;
       Car.create({marca, modelo, ano, preco, categoria, cor, cambio, imagem})
       .then((newCarAdded) => res.status(201).json(newCarAdded))
       .catch((errormessage) => res.status(500).json({ errormessage: 'Erro ao inserir o carro na base de dados da Relâmpago McQueen.' }))
@@ -38,7 +39,7 @@ export default class CarsControllers {
         const { modelo } = req.params;
         Car.findAll({ where: { modelo: { [Op.iLike]: `%${modelo}%` }}})
       .then((foundCarModel) => {
-        if (!foundCarModel) {
+        if (!foundCarModel.length) {
           res.status(404).json({ message: `No momento não temos este modelo de carro disponível na Relâmpago McQueen.` })
         }
         res.status(200).json(foundCarModel)       
