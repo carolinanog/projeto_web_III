@@ -1,11 +1,11 @@
 import express from 'express';
-import path from 'path';
+import { resolve } from 'path';
 import CarsControllers from '../controllers/CarsControllers.js';
 import multer from 'multer';
 
 
 export const router = express.Router();
-const fileName = multer.diskStorage({ destination: (req, file, cb) => cb(null,'path.resolve(./public/img-uploads/)'), filename: (req, file, cb) => cb(null, 'TESTE') });
+const fileName = multer.diskStorage({ destination: (req, file, cb) => cb(null,resolve('.', 'public', 'img-uploads')), filename: (req, file, cb) => cb(null, 'TESTE') });
 const uploadedImgFiles = multer({ fileName }).single('imagem');
 
 //display all cars
