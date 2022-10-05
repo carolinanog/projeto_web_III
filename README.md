@@ -9,7 +9,7 @@ Já no sistema interno, é preciso que o funcionário esteja cadastrado e logado
 
 - Rode o comando "npm i" na raiz do terminal para instalar os pacotes/as dependências necessárias.
 
-- Configure seu arquivo .env com os requisitos necessários, listados também no arquivo .env.example: 
+- Caso queira alterar as variáveis de ambiente do .env, configure seu próprio arquivo .env com os requisitos necessários, listados também no arquivo .env.example: 
 
 PORT = <<PORT>>  - Porta da aplicação geral
 HOST_DB = <<HOST_DB>>  - Host da base de dados
@@ -30,8 +30,9 @@ Na coleção importada no passo anterior, você verá as seguintes requests salv
 # GET_All_Cars-McQueenInternalSystem
 Pela rota http://localhost/McQueenInternalSystem/allCars - já salva para o teste, é só enviar com o send, que poderá ver todo o inventário disponível na Relâmpago McQueen Carros.
 
+
 # GETCarByID-McQueenInternalSystem
-Pela rota http://localhost/McQueenInternalSystem/carByID/c2c1da03-c44b-4ffb-984c-721994b64266 - já salva para o teste, é só enviar com o send, que poderá ver todo o carro Spin registrado com esse ID na Relâmpago McQueen Carros. 
+Pela rota http://localhost/McQueenInternalSystem/carByID/3c96a316-61dd-40cb-89d1-2895cd466ef6 - já salva para o teste, é só enviar com o send, que poderá ver todo o carro registrado com esse ID na Relâmpago McQueen Carros. 
 Outras sugestões de rotas, para a busca por ID:
 
 http://localhost/McQueenInternalSystem/carByID/f8d54ec0-64cc-46c8-8f64-3280df166a68 - Nivus Highline
@@ -49,9 +50,27 @@ http://localhost/McQueenInternalSystem/carByName/UNO
 
 
 # POSTAddNewCar-McQueenInternalSystem
-Pela rota http://localhost/McQueenInternalSystem/addNewCar - já salva para o teste, é possível adicionar um novo carro na base de dados da  Relâmpago McQueen Carros. 
+Pela rota http://localhost/McQueenInternalSystem/addNewCar - já salva para o teste, é possível adicionar um novo carro na base de dados da  Relâmpago McQueen Carros. No body da requisição, é para estarem esses dados para o envio e cadastro de novo carro, caso não estejam, copie e cole em JSON do Body da requisição:
+
+{   
+    "marca": "Teste POST2 novo carro cadastrar", 
+    "modelo": "TESTE POST2 Tcross Highline", 
+    "ano": 2020, 
+    "preco": 135000.00, 
+    "categoria": "SUV", 
+    "cor": "prata", 
+    "cambio": "automático"
+  }
 # DELETECar-McQueenInternalSystem
 Pela rota http://localhost/McQueenInternalSystem/deleteCar/46704ba9-2e38-4262-a10e-9f49d181721e - já salva para o teste, é só enviar com o send, que deleterá o carro Cruze LT registrado com esse ID do banco de dados da Relâmpago McQueen. Como sugestão, é possível deletar outros carros da base de dados, passando pela rota o ID do carro a ser deletado.
 
 # PUT-updateCarInfo-McQueenInternalSystem
-Pela rota http://localhost/McQueenInternalSystem/deleteCar/46704ba9-2e38-4262-a10e-9f49d181721e - já salva para o teste, é só enviar com o send, é possível atualizar as informações do carro registrado com esse ID do banco de dados da Relâmpago McQueen. Como sugestão, é possível checar pela rota http://localhost/McQueenInternalSystem/carByID/c35dbacf-ab10-4373-b000-e6621aca86c8 da requisição de busca pelo ID o mesmo carro, com as alterações passadas pelo body salvas.
+Pela rota http://localhost/McQueenInternalSystem/updateCarInfo/406f255f-1419-42fc-ab1a-c59268ff1dff - já salva para o teste, é só enviar com o send com essas informações no body para atualizar os dados desse carro, com esse ID:
+{
+  "marca": "UPDATE PUT TESTE5",
+ 	"modelo": "PUT TESTE5",
+ 	"preco": 12000.00,
+ 	"categoria": "PUT UPDATE teste4"
+}
+
+  para atualizar as informações do carro registrado com esse ID do banco de dados da Relâmpago McQueen. Como sugestão, é possível checar pela rota http://localhost/McQueenInternalSystem/carByID/406f255f-1419-42fc-ab1a-c59268ff1dff da requisição de busca pelo ID o mesmo carro, com as alterações passadas pelo body salvas e o registro no banco de dados alteradoS.

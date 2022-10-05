@@ -4,8 +4,7 @@ import { Op } from 'sequelize';
 export default class CarsControllers {
       static addCarToInventory(req, res) {
       const { marca, modelo, ano, preco, categoria, cor, cambio } = req.body;
-      const imagem = req.file.filename;
-      Car.create({marca, modelo, ano, preco, categoria, cor, cambio, imagem})
+      Car.create({marca, modelo, ano, preco, categoria, cor, cambio})
       .then((newCarAdded) => res.status(201).json(newCarAdded))
       .catch((errormessage) => res.status(500).json({ errormessage: 'Erro ao inserir o carro na base de dados da Relâmpago McQueen.' }))
     }

@@ -37,10 +37,6 @@ module.exports = {
         type: Sequelize.STRING(150),
         allowNull: false
       },
-      imagem: {
-        type: Sequelize.STRING(150),
-        allowNull: false
-      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false
@@ -48,7 +44,7 @@ module.exports = {
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false
-      },
+      }
     })
   },
   async down (queryInterface, Sequelize) {

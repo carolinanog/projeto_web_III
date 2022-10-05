@@ -9,8 +9,7 @@ export default class Car extends Model {
             preco: Sequelize.FLOAT,
             categoria: Sequelize.STRING(150),
             cor: Sequelize.STRING(100),
-            cambio: Sequelize.STRING(50),
-            imagem: Sequelize.STRING(150)
+            cambio: Sequelize.STRING(50)
         }, {
         sequelize
         })
