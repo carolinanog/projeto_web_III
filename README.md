@@ -18,6 +18,7 @@ USER_DB = <<USER_DB>>  - Usuário da base de dados
 PASS_DB = <<PASS_DB>>  - Senha da base de dados
 DATABASE= <<DATABASE>> - Nome da base de dados
 DIALECT= <<DIALECT>>   - Dialeto da linguagem SQL - foi utilizado o PostGres neste projeto 
+- Caso queira popular a base de dados em sua máquina, rodar os comandos sequelize-cli para fazer migration de DB npx sequelize db:migrate,  e seed npx sequelize-cli seed:generate --name demo-McQueen ajustando para como estão os arquivos migration e seeder no projeto. 
 
 - No terminal, na raiz do projeto, insira o comando "npm run dev". Você deverá ver a mensagem "O servidor está funcionando na porta 80.".
 
