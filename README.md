@@ -2,7 +2,7 @@
 Projeto Web 3 DevEL{AS} Carolina - Sistema interno de uma revendedora online de carros usados, a Relâmpago McQueen Carros, para visualizar todos os carros do inventário, ou buscar um carro por ID ou por nome, inserir novo carro ao sistema, deletar uma carro, e atualizar os dados de um carro no sistema.
 
 
-Já no sistema interno, é preciso que o funcionário esteja cadastrado e logado, para conseguir realizar as operações: 1. Cadastrar um veículo no sistema; 2. Buscar um veículo por ID; 3. Buscar um veículo por nome; 4. Atualizar o cadastro de um veículo no sistema; 4. Excluir um veículo do sistema.
+Já no sistema interno, é preciso que o funcionário esteja cadastrado e logado, para conseguir realizar as operações: 1. Cadastrar um veículo no sistema; 2. Buscar um veículo por ID; 3. Buscar um veículo por nome; 4. Atualizar o cadastro de um veículo no sistema; 4. Excluir um veículo do sistema/ 5. Visualizar todo o inventário.
 
 # Como rodar o projeto:
 - Clone o projeto do Git através do SSH git@github.com:carolinanog/projeto_web_III.git ou do HTTPS https://github.com/carolinanog/projeto_web_III.git, ou, ainda baixe o projeto zipado, como preferir.
@@ -18,6 +18,7 @@ USER_DB = <<USER_DB>>  - Usuário da base de dados
 PASS_DB = <<PASS_DB>>  - Senha da base de dados
 DATABASE= <<DATABASE>> - Nome da base de dados
 DIALECT= <<DIALECT>>   - Dialeto da linguagem SQL - foi utilizado o PostGres neste projeto 
+
 - Caso queira popular a base de dados em sua máquina, rodar os comandos sequelize-cli para fazer migration de DB npx sequelize db:migrate,  e seed npx sequelize-cli seed:generate --name demo-McQueen ajustando para como estão os arquivos migration e seeder no projeto. 
 
 - No terminal, na raiz do projeto, insira o comando "npm run dev". Você deverá ver a mensagem "O servidor está funcionando na porta 80.".
